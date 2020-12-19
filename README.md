@@ -17,8 +17,8 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#roadmap">Covered Features</a></li>
-    <li><a href="#contributing">Uncovered Features</a></li>
+    <li><a href="#covered-features">Covered Features</a></li>
+    <li><a href="#uncovered-features">Uncovered Features</a></li>
   </ol>
 </details>
 
@@ -30,12 +30,12 @@ First Version for Electronics Store E-Commerce System
 
 ### Built With
 
-1. .Net Core 3.1
-  * AutoMapper.Extensions.Microsoft.DependencyInjection (8.1.0)
-  * Microsoft.EntityFrameworkCore.SqlServer (3.1.10)
-  * Microsoft.EntityFrameworkCore.Tools (3.1.10)
-2. Angular CLI: 11.0.4 
-3. Node: 14.15.1
+1. .Net Core v3.1
+  * AutoMapper.Extensions.Microsoft.DependencyInjection v8.1.0
+  * Microsoft.EntityFrameworkCore.SqlServer v3.1.10
+  * Microsoft.EntityFrameworkCore.Tools v3.1.10
+2. Angular CLI: v11.0.4 
+3. Node: v14.15.1
 
 ### Patterns Used
   * Repository Pattern
@@ -48,9 +48,9 @@ First Version for Electronics Store E-Commerce System
 ### Prerequisites
 
 1. Visual Studio 2019 (Recommended)
-2. Node.js
+2. Node.js v 14.15.1
 3. PostMan (for API Testing)
-4. Angular
+4. Angular v 11.0.4 
 
 
 ### Installation
@@ -75,21 +75,21 @@ So make sure that those two ports are free for use before **start**
 Steps to start Project:
 
 1. Connect with your local Database via SQL Server
-2. make sure that packages  *Microsoft.EntityFrameworkCore.SqlServer (3.1.10) and *Microsoft.EntityFrameworkCore.Tools (3.1.10) is installed under the root folder of Electronics   Shop WebAPI
-3. Run those commands in the corresponding oreders to generate Database from Models (Code First Approach)
+2. make sure that packages  **Microsoft.EntityFrameworkCore.SqlServer (3.1.10)** and **Microsoft.EntityFrameworkCore.Tools (3.1.10)** is installed under the root folder of Electronics   Shop WebAPI
+3. Run those commands in the corresponding order to generate Database from Models (Code First Approach)
   
-  ```
-  Add-Migration DeployMigration
-  ```
+     ```
+     Add-Migration DeployMigration
+     ```
   
-  ```
-  Update-Database
-  ```
+     ```
+      Update-Database
+      ```
   
 4. Run Angular server from inside **ClientAPP** through this command
-```
-ng serve --port 8080
-```
+    ```
+    ng serve --port 8080
+    ```
 
 5. you are ready to discover now :)
 
@@ -99,16 +99,20 @@ ng serve --port 8080
 1. DataBase Design including ERD and Database Diagram (For Cient Side Cycle)
 
 2. Forms including 
-  *Login Form 
-  *Registration Form
+  *Login Form* 
+  *Registration Form*
   
-  **These forms including strict validation on all mandatory fields from client side on: **
-      *All columns using -> Reactive Forms ( supported by Angular ) except Birth Date column .
+   These forms including :
+     
+   * strict validation on all mandatory fields from client side on: 
+  
+        * All columns using -> Reactive Forms ( supported by Angular ) except Birth Date column (doesn't have vaildaiton in UI but you can't submit vaildation form without enter the date of birt) .
       
-  **and validation from server side on : **
-      *Checking if Email that was added is exist or not ( Registration Form )
-      *Checking if User email is exist ( Login Form )
-      *Checking if Password is correct , in condition of the email address is exist ( Login Form ) 
+   * validation from server side on : 
+     
+        * Checking if Email that was added is exist or not ( Registration Form )
+        * Checking if User email is exist ( Login Form )
+        * Checking if Password is correct , in condition of the email address is exist ( Login Form ) 
 
 3. List ```All Products``` as Default Filteration  
 
@@ -117,25 +121,34 @@ ng serve --port 8080
 5. **Pagination** with max **5** products
 
 6. **APIs** For :
-    **Categories**
-      *GetCategories
-    **Products**
-      *GetProducts
-      *GetProductsByCategory(For Product Filteration)
-      *AddProduct (For Administration)
-    **Customers**
-      *GetCustomers
-      *GetCustomer (one single customer)
-      *AddCustomer
+
+    **Categories :**
+      
+      * GetCategories
+    
+    **Products :**
+      
+      * GetProducts
+      * GetProductsByCategory(For Product Filteration)
+      * AddProduct (For Administration)
+    
+    **Customers:**
+    
+      * GetCustomers
+      * GetCustomer (one single customer)
+      * AddCustomer
       
   7. **PostMan APIs For Testing**    
 
 ## Uncovered Features 
 
 1. Back-end pages for the administrators including :
-    **Add products in client side **
-    **Filter products in client side**
-    **Discount Feature**
+
+      **Add products in client side**
+    
+      **Filter products in client side**
+    
+      **Discount Feature**
     
 2. Quantity beside each product
 
@@ -144,12 +157,16 @@ ng serve --port 8080
 4. Disable any post back in filtering in both Products and buyer listing page
 
 5. **APIs** For:
+
     **Orders**
-      *GetOrders
-      *AddOrder
-      *UpdateOrder
+    
+      * GetOrders
+      * AddOrder
+      * UpdateOrder
       
-6. Manual URL by customer ( you can enter module manually through URL )      
+6. Manual URL by customer ( you can enter module manually through URL ) .
+
+7. Add Product button is disabled .
       
       
 
